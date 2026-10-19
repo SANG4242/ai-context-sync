@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../tray/AppPaths.cs" Link="AppPaths.cs" />
+    <Compile Include="../../tray/TunnelController.cs" Link="TunnelController.cs" />
+    <Compile Include="../../tray/ProcessTreeHelper.cs" Link="ProcessTreeHelper.cs" />
+    <Compile Include="../../tray/ServiceState.cs" Link="ServiceState.cs" />
+    <Compile Include="../../tray/AppSettings.cs" Link="AppSettings.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+{
+  "tunnelClient": {
+    "version": "0.0.14",
+    "source": "https://platform.openai.com/settings/organization/tunnels",
+    "path": "tools/tunnel-client/v0.0.14/bin/tunnel-client.exe",
+    "redistributed": false
+  },
+  "desktopCommander": {
+    "repository": "https://github.com/SANG4242/DesktopCommanderMCP",
+    "branch": "custom/chatgpt-ui",
+    "path": "tools/desktop-commander"
+  },
+  "filesystem": {
+    "package": "@modelcontextprotocol/server-filesystem",
+    "version": "2026.8.31",
+    "path": "tools/filesystem-mcp",
+    "optional": true
+  }
+}

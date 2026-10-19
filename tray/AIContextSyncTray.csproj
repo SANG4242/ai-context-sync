@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationIcon>assets\app.ico</ApplicationIcon>
+    <RootNamespace>AIContextSyncTray</RootNamespace>
+    <AssemblyName>AIContextSyncTray</AssemblyName>
+    <PublishSingleFile>true</PublishSingleFile>
+    <DebugType>none</DebugType>
+    <SelfContained>false</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AIContextSyncCtl\**\*.cs" />
+    <ProjectReference Include="AIContextSyncCtl\AIContextSyncCtl.csproj" ReferenceOutputAssembly="false" />
+    <EmbeddedResource Include="assets\app.png">
+      <LogicalName>app.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="PublishControlClient" AfterTargets="Publish">
+    <MSBuild
+      Projects="AIContextSyncCtl\AIContextSyncCtl.csproj"
+      Targets="Publish"
+      Properties="Configuration=$(Configuration);RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=$(SelfContained);PublishSingleFile=true;PublishDir=$(PublishDir)" />
+  </Target>
+</Project>

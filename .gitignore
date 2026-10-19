@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+**/publish/
+artifacts/
+.runtime/
+.agent/
+.vs/
+*.user
+*.log
+*.key
+*.pem
+.env
+.env.*
+config/tunnel-client/*.yaml
+!config/tunnel-client/*.example.yaml
+tools/

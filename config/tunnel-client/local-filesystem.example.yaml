@@ -1,0 +1,9 @@
+control_plane:
+  base_url: https://api.openai.com
+  tunnel_id: YOUR_FILESYSTEM_TUNNEL_ID
+  api_key: env:OPENAI_TUNNEL_API_KEY
+health:
+  listen_addr: 127.0.0.1:8080
+mcp:
+  commands:
+    - command: 'node tools/filesystem-mcp/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js C:/mcp-workspace'
